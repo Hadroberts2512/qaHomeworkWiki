@@ -5,11 +5,21 @@ import {Builder,By, Capabilities, until, WebDriver, } from "selenium-webdriver";
   .withCapabilities(Capabilities.chrome())
   .build();
 
-  class employeePage {
+  class emPage {
       driver: WebDriver;
       url: string = "https://devmountain-qa.github.io/employee-manager/1.2_Version/index.html";
         //FILL OUT LOCATORS CONSTRUCTOR AND METHODS IN ORDER TO PASS THE TEST
-  }
+  
+  constructor(driver: WebDriver, url: string) {
+      this.driver = driver
+      this.url = url 
+
+  emPage.addEmployee: By = By.name("addEmployee")
+  emPage.newEmployee: By = By.name("newEmployee")
+  emPage.nameInput: By = By.name("nameInput")
+  empPage.phoneInput: By = By.name("phoneInput")
+  empPage.titleInput: By = By.name("titleInput")
+
 
   describe("Employee Manger Test", () => {
       beforeEach(async () => {
